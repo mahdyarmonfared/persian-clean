@@ -1,0 +1,30 @@
+{
+  "name": "persian-clean",
+  "version": "1.0.0",
+  "description": "Zero-dependency Persian text beautifier, automated ZWNJ injector, Arabic character unifier, and typography normalizer with an interactive Web Studio.",
+  "main": "src/core/index.js",
+  "bin": {
+    "persian-clean": "./bin/persian-clean.js"
+  },
+  "scripts": {
+    "start": "node bin/persian-clean.js ui",
+    "test": "node --test test/**/*.test.js"
+  },
+  "keywords": [
+    "persian",
+    "farsi",
+    "zwnj",
+    "typography",
+    "text-cleaner",
+    "normalizer",
+    "arabic-unifier",
+    "half-space",
+    "zero-dependency",
+    "cli"
+  ],
+  "author": "Mahdyar Monfared <mahdyar.monfared09@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PersianClean Studio | استودیوی پاک‌سازی و زیباسازی متون فارسی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-group">
+        <div class="logo-icon">✍️</div>
+        <div>
+          <h1>PersianClean <span class="badge">STUDIO</span></h1>
+          <p class="subtitle">پاک‌سازی حروف عربی، درج هوشمند نیم‌فاصله و اصلاح علائم نگارشی</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="port-indicator">● Port 3027</span>
+        <button id="loadSampleBtn" class="btn-ghost">📄 متن نمونه</button>
+      </div>
+    </header>
+
+    <!-- Toolbar & Options -->
+    <section class="card options-card">
+      <div class="toggles-grid">
+        <label class="toggle-item">
+          <input type="checkbox" id="chkZwnj" checked>
+          <span class="custom-checkbox"></span>
+          <span>درج خودکار نیم‌فاصله‌ها (می‌، ها، تر، مند...)</span>
+        </label>
+        <label class="toggle-item">
+          <input type="checkbox" id="chkChars" checked>
+          <span class="custom-checkbox"></span>
+          <span>یکپارچه‌سازی حروف عربی (ي/ك/ة و حذف کشیده)</span>
+        </label>
+        <label class="toggle-item">
+          <input type="checkbox" id="chkDigits" checked>
+          <span class="custom-checkbox"></span>
+          <span>تبدیل ارقام انگلیسی و عربی به فارسی (۰-۹)</span>
+        </label>
+        <label class="toggle-item">
+          <input type="checkbox" id="chkPunct" checked>
+          <span class="custom-checkbox"></span>
+          <span>اصلاح فواصل ویرگول و نقطه و تبدیل نقل‌قول به گیومه («»)</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Metrics Bar -->
+    <section class="metrics-bar">
+      <div class="metric-item">
+        <span class="metric-label">تعداد کلمات</span>
+        <span id="metricWords" class="metric-value">۰</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">تعداد کاراکترها</span>
+        <span id="metricChars" class="metric-value">۰</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">نیم‌فاصله‌های درج‌شده</span>
+        <span id="metricZwnj" class="metric-value highlight-cyan">۰</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">حروف عربی اصلاح‌شده</span>
+        <span id="metricArabic" class="metric-value highlight-yellow">۰</span>
+      </div>
+    </section>
+
+    <!-- Dual Pane Editor -->
+    <main class="editor-grid">
+      <!-- Input Pane -->
+      <div class="card pane-card">
+        <div class="pane-header">
+          <span class="pane-title">متن اولیه (ورودی)</span>
+          <button id="clearInputBtn" class="btn-sm">پاک کردن</button>
+        </div>
+        <textarea id="inputText" class="editor-textarea" placeholder="متن خود را اینجا تایپ کنید یا الصاق فرمایید..."></textarea>
+      </div>
+
+      <!-- Output Pane -->
+      <div class="card pane-card">
+        <div class="pane-header">
+          <span class="pane-title">متن استاندارد و پاک‌سازی‌شده</span>
+          <div class="pane-actions">
+            <button id="copyOutputBtn" class="btn-primary">📋 کپی متن</button>
+            <button id="downloadOutputBtn" class="btn-ghost">💾 ذخیره فایل</button>
+          </div>
+        </div>
+        <textarea id="outputText" class="editor-textarea output" readonly placeholder="نتیجه پاک‌سازی به صورت زنده اینجا نمایش داده می‌شود..."></textarea>
+      </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">متن با موفقیت کپی شد!</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
